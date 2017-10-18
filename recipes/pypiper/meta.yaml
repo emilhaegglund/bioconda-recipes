@@ -9,7 +9,7 @@ source:
   sha256: e86297aa2288f3296afc1f2ee9a7bcc40d81fa713adfdc8f641e686980d19e13
 
 build:
-  number: 0
+  number: 1
   skip: True # [not py27]
   script: $PYTHON setup.py install --single-version-externally-managed --record=record.txt
 
@@ -20,7 +20,7 @@ requirements:
 
   run:
     - python
-    
+
 test:
     imports:
       - pypiper
