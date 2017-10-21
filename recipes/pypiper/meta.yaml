@@ -23,7 +23,7 @@ requirements:
 
 test:
     imports:
-      - pypiper
+      - pyp
 
 about:
   home: http://pypiper.readthedocs.io/en/latest/
