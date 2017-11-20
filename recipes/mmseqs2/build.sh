@@ -1,4 +1,6 @@
 #!/bin/bash
+mkdir build
+cd build
 
 if [[ $(uname) == "Darwin" ]]; then
     echo "Configure for OSX"
