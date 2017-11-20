@@ -1,0 +1,25 @@
+package:
+  name: mmseqs2
+  version: 2.0
+
+source:
+  fn: 1-c7a89.tar.gz
+  url: https://github.com/soedinglab/MMseqs2/archive/1-c7a89.tar.gz
+  sha256: e756a0e5cb3aa8e1e5a5b834a58ae955d9594be1806f0f32800427c55f3a45d5
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake
+  run:
+    - libgcc
+test:
+  commands:
+    - mmseqs --help
+
+about:
+  home: 'https://mmseqs.com'
+  license: GPLv3
+  summary: MMseqs2, ultra fast and sensitive search and clustering suite
