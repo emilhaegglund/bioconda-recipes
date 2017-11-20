@@ -8,12 +8,14 @@ source:
   sha256: e756a0e5cb3aa8e1e5a5b834a58ae955d9594be1806f0f32800427c55f3a45d5
 
 build:
+  skip: True # [osx]
   number: 0
 
 requirements:
   build:
     - cmake
-    - gcc
+    - gcc # [not osx]
+    - llvm # [osx]
   run:
     - libgcc
 test:
