@@ -1,0 +1,41 @@
+{% set version = "0.0.1" %} 
+package:
+  name: agat
+  version: {{ version }}
+
+source:
+  url: https://github.com/NBISweden/AGAT/archive/v{{ version }}.tar.gz
+  sha256: 43fa3d6888cd0e6f39642a5f33aa987617cf53ba596f4a4bbc2bffa2b6a431ec
+
+build:
+  number: 0 
+
+requirements:
+  build:
+    - {{ compiler('cxx') }} 
+    - perl
+  run:
+    - perl
+    - perl-bioperl
+    - perl-clone
+    - perl-graph
+    - perl-lwp-simple
+    - perl-statistics-r
+    - perl-json
+    - perl-sort-naturally
+    - perl-file-share
+    - perl-file-sharedir-install
+    - r-base
+    - libdb
+
+test:
+  commands:
+    - agat_sp_add_introns.pl | grep 'https://github.com/NBISweden/AGAT'
+
+
+about:
+  home: https://github.com/NBISweden/AGAT/ 
+  license: GNU General Public v3 or later (GPLv3+)
+  license_family: GPL3
+  license_file: LICENSE
+  summary: Another Gff Analysis Toolkit
